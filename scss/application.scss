@@ -1,10 +1,10 @@
 // Media query
-$brk-xlarge: '(max-width: 2570px)';
-$brk-large: '(max-width: 1440px)';
-$brk-medium: '(max-width: 1285px)';
-$brk-narrow: '(max-width: 1024px)';
-$brk-spnarrow: '(max-width: 767px)';
-$brk-mobile: '(max-width: 374px)';
+$brk-xlarge: '(min-width: 1441px) and (max-width: 2570px)';
+$brk-large: '(min-width: 1286px) and (max-width: 1440px)';
+$brk-medium: '(min-width: 1024px) and (max-width: 1285px)';
+$brk-narrow: '(min-width: 767px) and (max-width: 1024px)';
+$brk-spnarrow: '(min-width: 374px) and (max-width: 767px)';
+$brk-mobile: '(min-width: 0) and (max-width: 374px)';
 
 
 @font-face {
@@ -113,7 +113,23 @@ p {
   font-weight: 300;
   width: 50%;
   margin-left: 25%;
+
+  @media #{$brk-spnarrow},
+  #{$brk-mobile} {
+    width: 80%;
+    margin-left: 10%;
+
+  }
+
+  @media #{$brk-narrow},
+  #{$brk-medium},
+  #{$brk-large},
+  #{$brk-xlarge} {
+    width: 50%;
+    margin-left: 25%;
+  }
 }
+
 
 
 .text {
@@ -183,7 +199,7 @@ ul .grid{
   margin: auto;
   display: block;
   //width: 80%;
-  max-width: 700px;
+  //max-width: 700px;
 }
 
 /* Caption of Modal Image */
@@ -253,22 +269,39 @@ ul .grid{
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
+
   align-items: start;
   margin-top:50px;
+
+  @media #{$brk-spnarrow},
+  #{$brk-mobile} {
+    //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+
+  }
+
+  @media #{$brk-narrow},
+  #{$brk-medium},
+  #{$brk-large},
+  #{$brk-xlarge} {
+    //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+  }
 }
+
+
+
 .grid img {
   //border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0  rgba(0,0,0,0.3);
   max-width: 100%;
 }
 
-
-
-
-
-
+.grid img:hover {
+  cursor: pointer;
+}
 
 
 
@@ -277,7 +310,7 @@ ul .grid{
   grid-column: 1 / -1;
   grid-row: 4 / 5;
   display: grid;
-  grid-template-columns: auto 25% 25% 25% auto;
+  grid-template-columns: auto 1fr 1fr 1fr auto;
   grid-template-rows: auto auto;
   grid-gap:3rem;
 }
@@ -332,6 +365,7 @@ ul .grid{
 
 ul {
   list-style-type: none;
+  -webkit-padding-start: 0;
 }
 
 ul li {
