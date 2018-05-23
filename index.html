@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="css/application.css">
 
 
-    <script src="lib/jquery-2.1.4.min.js"></script>
-    <script src="lib/d3.min.js"></script>
+
 
 </head>
 <style>
@@ -100,7 +99,7 @@
 <p>Однак Петро Олексійович не був обділений друзями. Одним із них, ще з дитинства, був Сергій Васильківський. На противагу ліричному і добродушному Петру, Сергій мав характер “з перцем”. Через схильність до гострого слова, прямоту характеру і любов до шаржів нажив чимало ворогів.</p>
 
 
-<h2>Сергій васильківський</h2>
+<h2>Сергій Васильківський</h2>
 
 <p>Він незмінний у своїй тематиці – крім юнацького періоду, коли створював «піренейські етюди». Відтоді Васильківський все життя малює Україну: від Криму до Галичини, – але, переважно, рідну йому Слобожанщину. Малює в сучасності пейзажних тем, в меланхолійності й спокійному чарі її степів, балок, хуторів і неба. Як багато на картинах Васильківського неба! Неба в різноманітті хмар, в пронизливій сині літа, в багатій палітрі сірої негоди.</p>
 <p>Малює в історичній ретроспективі, додаючи фльору героїки, як це видно в «Думі про трьох братів», «Козачому пікеті» чи «Сторожі козацьких вольностей». А річка Сіверський Донець – то взагалі окрема тема в його творчості.</p>
@@ -174,7 +173,6 @@
 <p>Картини Ткаченка торгуються на світових аукціонах Сотбі і Крісті, і ми би радили всім, хто сушить голову, куди б вигідно вкласти свої гроші – вкладати їх в українських живопис: буде дорожчати. Дивлячись на пейзажі художників Харківської пейзажної школи, ваше серце звеселиться, а душа очиститься від злого і суєтного. І тут ми жартуємо тільки злегка, адже справжнє мистецтво – то щось більше за ліки.</p>
 
 <div id="myModal" class="modal">
-
     <img class="modal-content" id="img01">
     <span class="close">&times;</span>
     <div id="next" >
@@ -186,6 +184,13 @@
 
     </div>
 </div>
+
+
+<script src="lib/jquery-2.1.4.min.js"></script>
+<script src="lib/d3.min.js"></script>
+<script src="js/slider.js"></script>
+
+
 <div class="read-more" style="margin:50px 0 100px 0;">
     <h3 class="read-text" ><b>Читайте також:</b></h3>
     <div class="read-more-first">
@@ -263,54 +268,6 @@
         посиланням. Велике прохання ставити гіперпосилання в першому чи другому абзаці вашого матеріалу.
     </div>
 </div>
-
-
-
-
-<script>
-    var modal = $('#myModal');
-    var modalImg = $("#img01");
-
-    // Get the modal
-    $('img').click(function() {
-        var theClass = this.className;
-        var imgArray = document.getElementsByClassName(theClass);
-        var index = $(imgArray).index(this);
-        modalImg.attr("src", this.src);
-        modal.click(function() {
-            modalImg.attr("src", this.src);
-        });
-
-
-            $('#next').click(function() {
-                index = index + 1;
-                if(index < imgArray.length) {
-                    modalImg.attr("src", imgArray[index].src);
-                }
-
-
-                if(index === imgArray.length) {
-                    index = 0;
-                    modalImg.attr("src", imgArray[index].src);
-                }
-
-
-            });
-
-
-     $('#myModal').css("display","block");
-
-    });
-
-    var span = $("#close");
-
-    // When the user clicks on <span> (x), close the modal
-    $(".close").click(function() {
-        $('#myModal').css("display","none");
-    })
-
-</script>
-
 
 
 </body>
