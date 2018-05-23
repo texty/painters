@@ -8,6 +8,8 @@ $brk-mobile: '(min-width: 0) and (max-width: 374px)';
 
 $leftMargin-mob: 10%;
 $leftMargin-desk: 25%;
+$title-font: 'Pacifico', cursive;
+
 
 
 @font-face { font-family: Gotham Pro; src: url(../fonts/GothamPro.ttf); }
@@ -29,7 +31,7 @@ body {
 
 
 h1 {
-  font-family: 'Azbuka', serif;
+  font-family: $title-font;
   text-align: center;
   padding-top:15vh;
   font-weight: normal;
@@ -60,7 +62,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Azbuka', serif;
+  font-family: $title-font;
   font-size: 36px;
   line-height: 57px;
   margin-top:150px;
@@ -140,8 +142,6 @@ h3 {
   line-height: 29px;
 }
 
-
-
 p {
     font-family: 'Gotham Pro', sans-serif;
     font-size: 18px;
@@ -163,6 +163,22 @@ p {
     margin-left: 25%;
     width: 50%;
   }
+}
+p.verse {
+  font-size: 25px;
+  line-height: 40px;
+  font-family: $title-font;
+  margin-left: 30%;
+  width: 50%;
+}
+
+
+p.footnote {
+  font-size: 13px;
+  line-height: 22px;
+  margin-left: 25%;
+  margin-bottom: 30px;
+  width: 50%;
 }
 
   .footer {

@@ -17,7 +17,7 @@ body {
   padding: 0; }
 
 h1 {
-  font-family: 'Azbuka', serif;
+  font-family: "Pacifico", cursive;
   text-align: center;
   padding-top: 15vh;
   font-weight: normal; }
@@ -35,7 +35,7 @@ h1 {
       line-height: 112px; } }
 
 h2 {
-  font-family: 'Azbuka', serif;
+  font-family: "Pacifico", cursive;
   font-size: 36px;
   line-height: 57px;
   margin-top: 150px;
@@ -104,6 +104,20 @@ p {
   .text, .subtitle, .credits {
     margin-left: 25%;
     width: 50%; } }
+
+p.verse {
+  font-size: 25px;
+  line-height: 40px;
+  font-family: "Pacifico", cursive;
+  margin-left: 30%;
+  width: 50%; }
+
+p.footnote {
+  font-size: 13px;
+  line-height: 22px;
+  margin-left: 25%;
+  margin-bottom: 30px;
+  width: 50%; }
 
 .footer {
   grid-column: 1 / -1;
