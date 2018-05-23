@@ -18,9 +18,14 @@ $brk-mobile: '(min-width: 0) and (max-width: 374px)';
   src: url(../fonts/GothamPro-Bold.ttf); /* Путь к файлу со шрифтом */
 }
 
+//@font-face {
+//  font-family: vivaldi; /* Гарнитура шрифта */
+//  src: url(../fonts/kurica-lapoi.otf); /* Путь к файлу со шрифтом */
+//}
+
 @font-face {
-  font-family: vivaldi; /* Гарнитура шрифта */
-  src: url(../fonts/kurica-lapoi.otf); /* Путь к файлу со шрифтом */
+  font-family: Azbuka; /* Гарнитура шрифта */
+  src: url(../fonts/Azbuka03_D_Regular.ttf); /* Путь к файлу со шрифтом */
 }
 
 
@@ -37,7 +42,7 @@ body {
 
 
 h1 {
-  font-family: 'vivaldi', sans-serif;
+  font-family: 'Azbuka', serif;
   font-size: 47px;
   line-height: 76px;
   text-align: center;
@@ -45,7 +50,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'vivaldi', sans-serif;
+  font-family: 'Azbuka', serif;
   font-size: 23px;
   line-height: 37px;
   margin-top:150px;
