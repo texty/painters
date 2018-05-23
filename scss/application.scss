@@ -24,7 +24,6 @@ html {
 }
 
 body {
-  //background-color: #F3ECE2;
   margin:0!important;
   padding:0!important;
 }
@@ -35,8 +34,8 @@ body {
 
 #frame {
   display:grid;
-  grid-template-columns: 5vw 90vw 5vw;
-  grid-template-rows: 5vw 5vw 85vw 5vw;
+  grid-template-columns: 10px calc(100% - 20px) 10px;
+  grid-template-rows: 10px calc(100vh - 20px) 10px;
   background-image: url(../img/levchenko/4.jpg);
   background-size: cover;
   margin:0;
@@ -45,18 +44,13 @@ body {
 
 
 #subframe {
-  grid-row: 3 / 4;
-  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
   background-color: #F3ECE2;
-  //width:90vw;
-  //height: 90vh;
-  //margin:0 auto;
 }
 
 .header {
-  grid-column: 2 / -2;
-  //height: 95vh;
-
+  grid-column: 2 / 3;
   @media only screen
   and (min-device-width: 768px)
   and (max-device-width: 1024px)
@@ -98,6 +92,49 @@ h1 {
   }
 }
 
+
+
+
+
+.logo{
+ position:absolute;
+ width:180px;
+}
+
+.social-icons {
+  margin-top: 5px;
+  grid-column: -2 / -3;
+  grid-row: 1 / 2;
+  display:grid;
+  grid-template-columns: auto 40px 30px;
+}
+
+.facebook {
+  grid-column: 2 / 3;
+  width: 28px;
+  margin: 0 10px 0 auto;
+}
+
+.twitter {
+  grid-column: 3 / 4;
+  width: 28px;
+
+}
+
+
+.credits {
+  font-family: 'Gotham Pro Bold', sans-serif;
+  text-align: left;
+  margin-bottom: 150px;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+#content {
+  background-color: #F3ECE2;
+}
+
+
 h2 {
   font-family: $title-font;
   font-size: 36px;
@@ -128,46 +165,15 @@ h3 {
 }
 
 
-
-.logo{
- position:absolute;
- width:180px;
-}
-
-.social-icons {
-  margin-top: 5px;
-  //grid-column: -2 / -3;
-  //grid-row: 1 / 2;
-  display:grid;
-  grid-template-columns: auto 40px 30px;
-}
-
-.facebook {
-  grid-column: 2 / 3;
-  width: 28px;
-  margin: 0 10px 0 auto;
-}
-
-.twitter {
-  grid-column: 3 / 4;
-  width: 28px;
-
-}
-
-
-.credits {
-  font-family: 'Gotham Pro Bold', sans-serif;
-  text-align: left;
-  margin-bottom: 150px;
-  font-size: 18px;
-  line-height: 29px;
-}
-
 p {
     font-family: 'Gotham Pro', sans-serif;
     font-size: 18px;
     line-height: 29px;
     font-weight: 300;
+}
+
+.subtitle {
+  padding-top:250px;
 }
 
 .text, .subtitle, .credits {

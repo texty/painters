@@ -12,29 +12,25 @@ html {
   color: #414141; }
 
 body {
-  background-image: url(../img/art.jpg);
-  background-size: contain;
-  display: grid;
-  grid-template-columns: 5px auto 5px;
-  grid-template-rows: 5px auto 5px;
   margin: 0 !important;
   padding: 0 !important; }
 
+#frame {
+  display: grid;
+  grid-template-columns: 10px calc(100% - 20px) 10px;
+  grid-template-rows: 10px calc(100vh - 20px) 10px;
+  background-image: url(../img/levchenko/4.jpg);
+  background-size: cover;
+  margin: 0;
+  padding: 0; }
+
+#subframe {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  background-color: #F3ECE2; }
+
 .header {
-  grid-column: 2 / -2;
-  height: 95vh; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-    .header {
-      height: 50vh; } }
-
-#content {
-  background-color: #F3ECE2;
-  grid-row: 2 / 4;
   grid-column: 2 / 3; }
-
-ul {
-  margin-left: 2%;
-  margin-right: 5%; }
 
 h1 {
   font-family: "Pacifico", cursive;
@@ -54,6 +50,36 @@ h1 {
       font-size: 70px;
       line-height: 112px; } }
 
+.logo {
+  position: absolute;
+  width: 180px; }
+
+.social-icons {
+  margin-top: 5px;
+  grid-column: -2 / -3;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: auto 40px 30px; }
+
+.facebook {
+  grid-column: 2 / 3;
+  width: 28px;
+  margin: 0 10px 0 auto; }
+
+.twitter {
+  grid-column: 3 / 4;
+  width: 28px; }
+
+.credits {
+  font-family: 'Gotham Pro Bold', sans-serif;
+  text-align: left;
+  margin-bottom: 150px;
+  font-size: 18px;
+  line-height: 29px; }
+
+#content {
+  background-color: #F3ECE2; }
+
 h2 {
   font-family: "Pacifico", cursive;
   font-size: 36px;
@@ -72,46 +98,16 @@ h3 {
   font-family: 'Gotham Pro', sans-serif;
   font-size: 23px;
   line-height: 37px;
-  font-weight: normal;
-  -webkit-margin-before: 0em; }
-
-.logo {
-  position: absolute;
-  width: 180px; }
-
-.social-icons {
-  margin-top: 5px;
-  margin-right: 10px;
-  display: grid;
-  grid-template-columns: auto 40px 30px; }
-
-.facebook {
-  grid-column: 2 / 3;
-  width: 28px;
-  margin: 0 10px 0 auto; }
-
-.twitter {
-  grid-column: 3 / 4;
-  width: 28px; }
-
-.subtitle {
-  margin-top: 0 !important; }
-
-h3 {
-  padding-top: 150px; }
-
-.credits {
-  font-family: 'Gotham Pro Bold', sans-serif;
-  text-align: left;
-  margin-bottom: 150px;
-  font-size: 18px;
-  line-height: 29px; }
+  font-weight: normal; }
 
 p {
   font-family: 'Gotham Pro', sans-serif;
   font-size: 18px;
   line-height: 29px;
   font-weight: 300; }
+
+.subtitle {
+  padding-top: 250px; }
 
 @media (min-width: 374px) and (max-width: 767px), (min-width: 0) and (max-width: 374px) {
   .text, .subtitle, .credits {
