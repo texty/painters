@@ -12,9 +12,29 @@ html {
   color: #414141; }
 
 body {
+  background-image: url(../img/art.jpg);
+  background-size: contain;
+  display: grid;
+  grid-template-columns: 5px auto 5px;
+  grid-template-rows: 5px auto 5px;
+  margin: 0 !important;
+  padding: 0 !important; }
+
+.header {
+  grid-column: 2 / -2;
+  height: 95vh; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    .header {
+      height: 50vh; } }
+
+#content {
   background-color: #F3ECE2;
-  margin: 0;
-  padding: 0; }
+  grid-row: 2 / 4;
+  grid-column: 2 / 3; }
+
+ul {
+  margin-left: 2%;
+  margin-right: 5%; }
 
 h1 {
   font-family: "Pacifico", cursive;
@@ -52,18 +72,16 @@ h3 {
   font-family: 'Gotham Pro', sans-serif;
   font-size: 23px;
   line-height: 37px;
-  font-weight: normal; }
+  font-weight: normal;
+  -webkit-margin-before: 0em; }
 
 .logo {
   position: absolute;
-  margin-left: 2vw;
   width: 180px; }
 
 .social-icons {
-  margin-right: 2vw;
   margin-top: 5px;
-  grid-column: -2 / -3;
-  grid-row: 1 / 2;
+  margin-right: 10px;
   display: grid;
   grid-template-columns: auto 40px 30px; }
 
@@ -76,12 +94,11 @@ h3 {
   grid-column: 3 / 4;
   width: 28px; }
 
-.header {
-  grid-column: 2 / -2;
-  height: 95vh; }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-    .header {
-      height: 50vh; } }
+.subtitle {
+  margin-top: 0 !important; }
+
+h3 {
+  padding-top: 150px; }
 
 .credits {
   font-family: 'Gotham Pro Bold', sans-serif;

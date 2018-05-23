@@ -24,9 +24,46 @@ html {
 }
 
 body {
-  background-color: #F3ECE2;
+  //background-color: #F3ECE2;
+  margin:0!important;
+  padding:0!important;
+}
+
+#my-container {
+
+}
+
+#frame {
+  display:grid;
+  grid-template-columns: 5vw 90vw 5vw;
+  grid-template-rows: 5vw 5vw 85vw 5vw;
+  background-image: url(../img/levchenko/4.jpg);
+  background-size: cover;
   margin:0;
-  padding:0;
+  padding: 0;
+}
+
+
+#subframe {
+  grid-row: 3 / 4;
+  grid-column: 2 / 4;
+  background-color: #F3ECE2;
+  //width:90vw;
+  //height: 90vh;
+  //margin:0 auto;
+}
+
+.header {
+  grid-column: 2 / -2;
+  //height: 95vh;
+
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    //height: 50vh;
+  }
 }
 
 
@@ -94,15 +131,13 @@ h3 {
 
 .logo{
  position:absolute;
- margin-left:2vw;
  width:180px;
 }
 
 .social-icons {
-  margin-right: 2vw;
   margin-top: 5px;
-  grid-column: -2 / -3;
-  grid-row: 1 / 2;
+  //grid-column: -2 / -3;
+  //grid-row: 1 / 2;
   display:grid;
   grid-template-columns: auto 40px 30px;
 }
@@ -119,20 +154,6 @@ h3 {
 
 }
 
-.header {
-  grid-column: 2 / -2;
-  height: 95vh;
-
-  @media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 1) {
-    height: 50vh;
-  }
-
-
-}
 
 .credits {
   font-family: 'Gotham Pro Bold', sans-serif;
