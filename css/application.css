@@ -237,10 +237,10 @@ ul .grid {
   cursor: pointer; }
 
 .slides {
-  list-style-type: none; }
+  list-style-type: none;
+  margin-top: 60px; }
 
 #img01 {
-  margin-top: 60px;
   /* ----------- iPad Portrait ----------- */
   /* ----------- iPad Pro 12.9 Portrait ----------- */
   /* ----------- Others ----------- */ }
