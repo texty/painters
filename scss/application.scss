@@ -195,11 +195,24 @@ p {
   }
 }
 p.verse {
-  font-size: 25px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 35px;
   font-family: $title-font;
   margin-left: 30%;
   width: 50%;
+  @media #{$brk-spnarrow},
+  #{$brk-mobile} {
+    margin-left: 10%;
+    width: 80%;
+  }
+
+  @media #{$brk-narrow},
+  #{$brk-medium},
+  #{$brk-large},
+  #{$brk-xlarge} {
+    margin-left: 30%;
+    width: 50%;
+  }
 }
 
 
@@ -326,9 +339,27 @@ p.footnote {
       max-height:100vh;
       max-width:100vw;
     }
+    /* ----------- iPad Portrait ----------- */
+    @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1) {
+      max-height:100vh!important;
+      max-width:100vw!important;
+    }
 
-    @media #{$brk-narrow},
-    #{$brk-medium},
+    /* ----------- iPad Pro 12.9 Portrait ----------- */
+    @media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    }
+
+
+    /* ----------- Others ----------- */
+    @media
     #{$brk-large},
     #{$brk-xlarge} {
       height:100vh;
