@@ -194,6 +194,17 @@ p {
     width: 50%;
   }
 }
+
+p.caption {
+  font-family: $title-font;
+  font-size: 20px;
+  line-height: 35px;
+  margin-left: 0;
+  margin-bottom: 30px;
+  width: 100%;
+  margin:0;
+}
+
 p.verse {
   font-size: 20px;
   line-height: 35px;
@@ -214,6 +225,8 @@ p.verse {
     width: 50%;
   }
 }
+
+
 
 
 p.footnote {
