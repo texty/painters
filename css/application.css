@@ -1,19 +1,12 @@
-@charset "UTF-8";
 @font-face {
   font-family: Gotham Pro;
-  /* Гарнитура шрифта */
-  src: url(../fonts/GothamPro.ttf);
-  /* Путь к файлу со шрифтом */ }
+  src: url(../fonts/GothamPro.ttf); }
 @font-face {
   font-family: Gotham Pro Bold;
-  /* Гарнитура шрифта */
-  src: url(../fonts/GothamPro-Bold.ttf);
-  /* Путь к файлу со шрифтом */ }
+  src: url(../fonts/GothamPro-Bold.ttf); }
 @font-face {
   font-family: Azbuka;
-  /* Гарнитура шрифта */
-  src: url(../fonts/Azbuka03_D_Regular.ttf);
-  /* Путь к файлу со шрифтом */ }
+  src: url(../fonts/Azbuka03_D_Regular.ttf); }
 html {
   font-size: 12px;
   color: #414141; }
@@ -26,6 +19,7 @@ body {
 h1 {
   font-family: 'Azbuka', serif;
   text-align: center;
+  padding-top: 15vh;
   font-weight: normal; }
   @media (min-width: 374px) and (max-width: 767px), (min-width: 0) and (max-width: 374px), (min-width: 767px) and (max-width: 1024px) {
     h1 {
@@ -62,9 +56,11 @@ h3 {
 
 .logo {
   position: absolute;
+  margin-left: 2vw;
   width: 180px; }
 
 .social-icons {
+  margin-right: 2vw;
   margin-top: 5px;
   grid-column: -2 / -3;
   grid-row: 1 / 2;
@@ -82,28 +78,14 @@ h3 {
 
 .header {
   grid-column: 2 / -2;
-  height: 95vh;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  height: 95vh; }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
     .header {
       height: 50vh; } }
 
-@media (min-width: 374px) and (max-width: 767px), (min-width: 0) and (max-width: 374px) {
-  .subtitle {
-    width: 80%;
-    margin-left: 10%; } }
-@media (min-width: 767px) and (max-width: 1024px), (min-width: 1024px) and (max-width: 1285px), (min-width: 1286px) and (max-width: 1440px), (min-width: 1441px) and (max-width: 2570px) {
-  .subtitle {
-    margin-left: 25%;
-    width: 50%; } }
-
 .credits {
   font-family: 'Gotham Pro Bold', sans-serif;
   text-align: left;
-  width: 50%;
-  margin-left: 25%;
   margin-bottom: 150px;
   font-size: 18px;
   line-height: 29px; }
@@ -112,35 +94,16 @@ p {
   font-family: 'Gotham Pro', sans-serif;
   font-size: 18px;
   line-height: 29px;
-  font-weight: 300;
-  width: 50%;
-  margin-left: 25%; }
-  @media (min-width: 374px) and (max-width: 767px), (min-width: 0) and (max-width: 374px) {
-    p {
-      width: 80%;
-      margin-left: 10%; } }
-  @media (min-width: 767px) and (max-width: 1024px), (min-width: 1024px) and (max-width: 1285px), (min-width: 1286px) and (max-width: 1440px), (min-width: 1441px) and (max-width: 2570px) {
-    p {
-      width: 50%;
-      margin-left: 25%; } }
+  font-weight: 300; }
 
-.text {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-size: 1.4rem;
-  line-height: 2.5rem; }
-  @media (min-width: 1441px) and (max-width: 2570px), (min-width: 1286px) and (max-width: 1440px), (min-width: 1024px) and (max-width: 1285px), (min-width: 767px) and (max-width: 1024px) {
-    .text {
-      width: 50%;
-      margin-left: 25%; } }
-  @media (min-width: 374px) and (max-width: 767px) {
-    .text {
-      width: 80%;
-      margin-left: 10%; } }
-  @media (min-width: 0) and (max-width: 374px) {
-    .text {
-      width: 90%;
-      margin-left: 5%; } }
+@media (min-width: 374px) and (max-width: 767px), (min-width: 0) and (max-width: 374px) {
+  .text, .subtitle, .credits {
+    width: 80%;
+    margin-left: 10%; } }
+@media (min-width: 767px) and (max-width: 1024px), (min-width: 1024px) and (max-width: 1285px), (min-width: 1286px) and (max-width: 1440px), (min-width: 1441px) and (max-width: 2570px) {
+  .text, .subtitle, .credits {
+    margin-left: 25%;
+    width: 50%; } }
 
 .footer {
   grid-column: 1 / -1;
