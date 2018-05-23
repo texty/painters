@@ -157,6 +157,10 @@ p.footnote {
   background-color: #252626;
   color: white; }
 
+ul.grid {
+  margin-top: 50px;
+  margin-bottom: 100px; }
+
 ul li {
   margin: 0;
   padding: 0; }
