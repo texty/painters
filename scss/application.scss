@@ -73,9 +73,11 @@ body {
   @media #{$brk-medium},
   #{$brk-large},
   #{$brk-xlarge} {
+
+    margin: 100px auto 0 auto;
     display:block;
     width:70%;
-    margin:auto;
+    //margin:auto;
     text-align: center;
   }
 }
