@@ -17,6 +17,9 @@ $title-font: 'Pacifico', cursive;
 //@font-face {font-family: vivaldi; src: url(../fonts/kurica-lapoi.otf);}
 @font-face { font-family: Azbuka; src: url(../fonts/Azbuka03_D_Regular.ttf); }
 
+* {
+  -webkit-margin-before: 0em;
+}
 
 html {
   font-size: 12px;
@@ -34,8 +37,8 @@ body {
 
 #frame {
   display:grid;
-  grid-template-columns: 10px calc(100% - 20px) 10px;
-  grid-template-rows: 10px calc(100vh - 20px) 10px;
+  grid-template-columns: 20px calc(100% - 40px) 20px;
+  grid-template-rows: 20px calc(100vh - 40px) 20px;
   background-image: url(../img/art.jpg);
   background-size: cover;
   margin:0;
@@ -60,16 +63,87 @@ body {
   }
 }
 
+.subtitle-desk {
+  @media #{$brk-spnarrow},
+  #{$brk-mobile},
+  #{$brk-narrow}{
+    display:none;
+  }
+
+  @media #{$brk-medium},
+  #{$brk-large},
+  #{$brk-xlarge} {
+    display:block;
+    width:70%;
+    margin:auto;
+    text-align: center;
+  }
+}
+
+.subtitle-mob {
+  @media #{$brk-spnarrow},
+  #{$brk-mobile},
+  #{$brk-narrow}{
+    display:block;
+    width:80%;
+    margin-left:10%;
+    padding-top: 150px;
+    text-align: left;
+  }
+
+  @media #{$brk-medium},
+  #{$brk-large},
+  #{$brk-xlarge} {
+    display:none;
+
+  }
+}
+
+
+.credits {
+    display:block;
+    font-family: 'Gotham Pro Bold', sans-serif;
+    text-align: left;
+    //margin-bottom: 150px;
+    font-size: 18px;
+    line-height: 29px;
+}
+
+
+.first {
+  @media #{$brk-spnarrow},
+  #{$brk-mobile},
+  #{$brk-narrow}{
+    display:block;
+    width:80%;
+    margin-left:10%;
+    padding-top: 0;
+    margin-bottom: 150px;
+    text-align: left;
+  }
+
+  @media #{$brk-medium},
+  #{$brk-large},
+  #{$brk-xlarge} {
+    -webkit-margin-before: 0;
+    padding-top: 200px;
+
+  }
+
+}
+
+
 
 h1 {
   font-family: $title-font;
   text-align: center;
-  padding-top:15vh;
   font-weight: normal;
 
   @media #{$brk-spnarrow},
-  #{$brk-mobile}
+  #{$brk-mobile},
+  #{$brk-narrow}
    {
+    padding-top:15vh;
     font-size: 50px;
     line-height: 80px;
   }
@@ -85,7 +159,6 @@ h1 {
   }
 
   @media
-  #{$brk-narrow},
   #{$brk-medium},
   #{$brk-large},
   #{$brk-xlarge} {
@@ -125,16 +198,11 @@ h1 {
 }
 
 
-.credits {
-  font-family: 'Gotham Pro Bold', sans-serif;
-  text-align: left;
-  margin-bottom: 150px;
-  font-size: 18px;
-  line-height: 29px;
-}
 
 #content {
   background-color: #F3ECE2;
+  margin:0;
+  padding:0;
 }
 
 
@@ -175,9 +243,8 @@ p {
     font-weight: 300;
 }
 
-.subtitle {
-  padding-top:250px;
-}
+
+
 
 .text, .subtitle, .credits {
   @media #{$brk-spnarrow},
