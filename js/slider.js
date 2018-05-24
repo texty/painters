@@ -2,7 +2,7 @@ var modal = $('#myModal');
 var modalImg = $("#img01");
 
 // Get the modal
-$('img').click(function() {
+$('img:not(.gif):not(.img-responsive)').click(function() {
     var theClass = this.className;
     var imgArray = document.getElementsByClassName(theClass);
     var index = $(imgArray).index(this);
